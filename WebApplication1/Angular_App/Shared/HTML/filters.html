@@ -1,0 +1,21 @@
+﻿<!--<ul class="filter-msg col-xs-12 row">-->
+<li ng-repeat="item in basicAppliedFilters | filter:{Value: '!!'}">
+    <strong>
+        {{item.Label}}:
+    </strong>
+    <span>
+        {{item.VLabel}}
+    </span>
+    <i ng-click="ClearFilterItem(item.Key)" class="fa fa-close"></i>
+</li>
+<li ng-repeat="item in rangeAppliedFilters | filter:{ValueFrom: '!!'}">
+    <strong>
+        {{item.Label}}:
+    </strong>
+    <span>
+        {{item.ValueFrom}} to {{item.ValueTo}}
+    </span>
+    <i ng-click="ClearRangeFilterItem(item.Key)" class="fa fa-close"></i>
+</li>
+<div ng-show="anyFiltersApplied()">No filters are applied</div>
+<!--</ul>-->

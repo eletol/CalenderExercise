@@ -1,0 +1,153 @@
+﻿<header class="main-header"style="margin-top: 10px">
+
+
+    <div class="container">
+        <div class="row">
+
+            <div class="col-md-12">
+                <!-- form search -->
+                <form class="form-search-list" >
+               
+                    <div class="row">
+                        <div class="col-md-5">
+                            <strong>Choose your month:</strong>
+                        </div>
+                    </div>
+
+                    <div class="row " style="margin-bottom: 10px">
+
+                            <ul class="col-md-9" id="months">
+                                <li><a  ng-class="{'activeMonth':selectedMonth == 1}" ng-click="getAppointments(1)" href="#" >Jan</a></li>
+                                <li><a ng-class="{'activeMonth':selectedMonth == 2}" ng-click="getAppointments(2)" href="#" >Feb</a></li>
+                                <li><a ng-class="{'activeMonth':selectedMonth == 3}" ng-click="getAppointments(3)" href="#" >March</a></li>
+                                <li><a ng-class="{'activeMonth':selectedMonth == 4}" ng-click="getAppointments(4)" href="#" >April </a></li>
+                                <li><a ng-class="{'activeMonth':selectedMonth == 5}" ng-click="getAppointments(5)" href="#" >May </a></li>
+                                <li><a ng-class="{'activeMonth':selectedMonth == 6}" ng-click="getAppointments(6)" href="#">June </a></li>
+                                <li><a ng-class="{'activeMonth':selectedMonth == 7}" ng-click="getAppointments(7)" href="#">July </a></li>
+                                <li><a ng-class="{'activeMonth':selectedMonth == 8}" ng-click="getAppointments(8)" href="#" >Aug </a></li>
+                                <li><a ng-class="{'activeMonth':selectedMonth == 9}" ng-click="getAppointments(9)" href="#">Sep </a></li>
+                                <li><a ng-class="{'activeMonth':selectedMonth == 10}" ng-click="getAppointments(10)" href="#">Oct </a></li>
+                                <li><a ng-class="{'activeMonth':selectedMonth == 11}" ng-click="getAppointments(11)" href="#" >Nov </a></li>
+                                <li><a ng-class="{'activeMonth':selectedMonth == 12}" ng-click="getAppointments(12)" href="#" >Dec </a></li>
+
+
+
+
+
+
+                            </ul>
+
+                        </div>
+                </form>  <!-- form search -->
+            </div>
+
+        </div>
+
+
+
+
+
+    </div><!-- end form search area-->
+
+</header><!-- end main-header -->
+<!-- body-content -->
+<div class="body-content clearfix">
+
+
+    <div class="bg-color2">
+        <div class="container">
+            <div class="row" style="margin-bottom: 50px;">
+                <div ng-if="showList" class="col-md-5 bg-light" style="margin-left: 10px">
+
+                    <div class="text-left" id="affix-box">
+                        <ul class="list-inline" style="margin: 0; padding: 0; display: inline-grid;">
+                            <li ng-repeat="appointment in appointments">
+                                <i class="fa fa-map-marker"></i>
+                                <h6 style="display: inline-block">
+                                    <strong>{{appointment.Date| date:'medium'}}</strong>
+                                </h6>
+
+                                <p style="display: inline-block; margin: 5px">
+                                    <strong>:</strong>
+                                </p>
+                                <a ng-click="showDetailsFun(appointment)" href="#">
+
+                                    <p style="display: inline-block">{{appointment.Title}}</p>
+                                </a>
+
+                                </li>
+
+
+
+                        </ul>
+                    </div><!-- box affix right -->
+
+
+                </div>
+                <div class="col-md-1">
+                </div>
+
+                    <div class="col-md-5 bg-light " ng-if="showDetails">
+                        <ul class="list-inline" style="margin: 0; padding: 0; display: inline-grid;">
+                            <li>
+                                <i class="fa fa-map-marker"></i>
+                                <h5 style="display: inline-block">
+                                    <strong>Organizer</strong>
+                                </h5>
+                                <p style="display: inline-block; margin: 5px">
+                                    <strong>:</strong>
+                                </p>
+                                <p style="display: inline-block">{{appointmentDetails.Organizer.Name}}</p>
+
+
+                            </li>
+                            <li>
+                                <i class="fa fa-map-marker"></i>
+                                <h5 style="display: inline-block">
+                                    <strong>Date</strong>
+                                </h5>
+                                <p style="display: inline-block; margin: 5px">
+                                    <strong>:</strong>
+                                </p>
+                                <p style="display: inline-block">{{appointmentDetails.Date| date:'medium'}}</p>
+
+
+                            </li>
+                            <li>
+                                <i class="fa fa-map-marker"></i>
+                                <h5 style="display: inline-block">
+                                    <strong>Subject</strong>
+                                </h5>
+                                <p style="display: inline-block; margin: 5px">
+                                    <strong>:</strong>
+                                </p>
+                                <p style="display: inline-block">{{appointmentDetails.Subject}}</p>
+
+
+                            </li>
+                            <li>
+                                <i class="fa fa-map-marker"></i>
+                                <h5 style="display: inline-block">
+                                    <strong>Attendees</strong>
+                                </h5>
+                                <p style="display: inline-block; margin: 5px">
+                                    <strong>:</strong>
+                                </p>
+                                <br />
+                                <ul class="list-inline" style="margin: 0; padding: 0; display: inline-grid;">
+                                    <li ng-repeat="at in appointmentDetails.Attendees" style="display: list-item;list-style-type: disc; list-style-position: inside;">{{at.Employee.Name}}</li>
+
+                                </ul>
+
+                            </li>
+
+                        </ul>
+
+
+                    </div>
+
+                </div>
+        </div>
+    </div>
+
+</div><!--end body-content -->

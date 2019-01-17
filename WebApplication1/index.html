@@ -1,0 +1,105 @@
+﻿<!DOCTYPE html>
+<html dir="ltr"   ng-app="AssistanceApp" ng-controller="AssistanceAppController">
+<head>
+    <base href="/">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Calender Task</title>
+
+
+
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+   
+    <!-- Themes styles-->
+    <link href="Content/Site.css" rel="stylesheet">
+   
+
+
+</head>
+<body>
+
+<div >
+
+    <div class="container">
+        <nav class="navbar navbar-expand-lg   bg-light my-2 my-lg-0">
+                <a ng-class="{'active':selectedTab === 'home'}" class="navbar-brand nav-link nav-item" href="" ui-sref="home"><span>Calender</span></a>
+                 <a ng-class="{'active':selectedTab === 'helpPage'}" class="navbar-brand nav-link nav-item" href="" ui-sref="helpPage"><span>About</span></a>
+            
+        </nav>
+    </div>
+    <section ui-view="" class=""></section>
+
+</div>
+    <div id="dvLoader" class="preeLoaderContainer">
+        <div class="sk-circle" id="sk-circle">
+            <div class="sk-circle1 sk-child"></div>
+            <div class="sk-circle2 sk-child"></div>
+            <div class="sk-circle3 sk-child"></div>
+            <div class="sk-circle4 sk-child"></div>
+            <div class="sk-circle5 sk-child"></div>
+            <div class="sk-circle6 sk-child"></div>
+            <div class="sk-circle7 sk-child"></div>
+            <div class="sk-circle8 sk-child"></div>
+            <div class="sk-circle9 sk-child"></div>
+            <div class="sk-circle10 sk-child"></div>
+            <div class="sk-circle11 sk-child"></div>
+            <div class="sk-circle12 sk-child"></div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"
+            integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+            crossorigin="anonymous"></script>
+<script src="https://code.angularjs.org/1.2.20/angular.js"></script>
+<script src="https://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.11.0.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.14/angular-ui-router.js"></script>
+<script src="bower_components/angular-local-storage/dist/angular-local-storage.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-messages/1.6.1/angular-messages.js"></script>
+<script src="Scripts/angular-translate.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angularjs-toaster/1.1.0/toaster.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-animate.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-sanitize.js"></script>
+<script src="Scripts/angular-cookies.js"></script>
+<script src="Scripts/ngDialog.js"></script>
+<script src="Scripts/angular-modal-service.min.js"></script>
+<script src="Scripts/angular-idle.min.js"></script>
+<script src="Scripts/ng-infinite-scroll.min.js"></script>
+<script src="Angular_App/Shared/AssistanceApp.shared.js"></script>
+<script src="Angular_App/Shared/Services/authService.js"></script>
+<script src="Angular_App/Shared/Modals/yesnocontroller.js"></script>
+<script src="Angular_App/Shared/Services/appSetting.js"></script>
+<script src="Angular_App/Shared/Services/lookUpService.js"></script>
+<script src="Angular_App/Shared/Services/servicesService.js"></script>
+<script src="Angular_App/Shared/Directives/DateTimePicker.js"></script>
+<script src="Angular_App/Shared/Directives/filtersDirective.js"></script>
+<script src="Angular_App/Shared/Directives/dateTimePickerAddOn.js"></script>
+<script src="Angular_App/Shared/Directives/ngReset.js"></script>
+<script src="Angular_App/Shared/Directives/whenScrolled.js"></script>
+<script src="Angular_App/Components/Help/AssistanceApp.help.js"></script>
+<script src="Angular_App/Components/Help/helpController.js"></script>
+<script src="Angular_App/Components/Help/helpService.js"></script>
+<script src="Angular_App/Components/Home/AssistanceApp.home.js"></script>
+<script src="Angular_App/Components/Home/homeController.js"></script>
+<script src="Angular_App/Components/Home/homeService.js"></script>
+
+<script src="Angular_App/app.js"></script>
+
+<script>
+    
+</script>
+<script>
+
+
+</script>
+
+
+
+<style>
+    </style>
+</body>
+</html>
